@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the Angular application for production with SSR
-RUN npm run build:ssr
+RUN npm serve:ssr:free-grocery-frontend
 
 # Expose the port the app runs on
 EXPOSE 4545
