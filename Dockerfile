@@ -13,11 +13,11 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-# Build the Angular application for production with SSR
-RUN npm run serve:ssr:free-grocery-frontend
+# Build the Angular application for production
+RUN npm run build
 
 # Expose the port the app runs on
 EXPOSE 4545
 
 # Start the server
-CMD ["node", "dist/free-grocery-frontend/server/main.js"]
+CMD ["npm", "run", "serve:ssr:free-grocery-frontend"]
